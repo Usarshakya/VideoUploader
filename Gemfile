@@ -17,6 +17,10 @@ gem 'pry-rails', '~> 0.3.5'
 #devise
 gem 'devise'
 
+#ignore
+gem 'dotenv-rails', groups: [:development, :test]
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
