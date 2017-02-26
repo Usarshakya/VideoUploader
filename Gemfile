@@ -7,6 +7,7 @@ end
 
 #video upload gem
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
