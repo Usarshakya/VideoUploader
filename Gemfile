@@ -15,6 +15,7 @@ gem 'carrierwave-video', '~> 0.5.6'
 gem 'pry-rails', '~> 0.3.5'
 
 #devise
+gem 'devise'
 
 
 
