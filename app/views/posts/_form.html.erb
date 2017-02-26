@@ -12,14 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_area :title %>
+    <%= f.label :descrition "whats your video about?" %>
+    <%= f.text_area :description %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+    <% if post.video.present? %>
+      <%= video_tag post.video_url.to_s %>
+    <% end %>
+
+    <%= f.label :Video %>    
+    <%= f.file_field :video %>    
   </div>
+
+  
 
   <div class="actions">
     <%= f.submit %>
