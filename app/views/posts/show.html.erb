@@ -5,7 +5,7 @@
 
 <dl class="dl-horizontal">  
   <dt><strong><%= model_class.human_attribute_name(:video) %>:</strong></dt>
-  <dd><%= video_tag @post.video.url %></dd>
+  <dd><%= video_tag @post.video.url.to_s %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @post.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>

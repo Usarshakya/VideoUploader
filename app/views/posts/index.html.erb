@@ -4,14 +4,18 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= link_to post.id, post_path(post) %></td>        
-        <td><%= video_tag post.video_url %></td>
+                
+        <td><%= video_tag post.video_url.to_s %></td>
         <td>
           <p>
-            <b><%= post.title %></b>
+            <b><%= post.title %></b><br>
             <%= post.description %>
           </p>
-        </td>   
+        </td> 
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      post_path(post), :class => 'btn btn-default btn-xs' %>
+        </td>  
         
       </tr>
     <% end %>
