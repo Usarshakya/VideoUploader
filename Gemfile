@@ -20,6 +20,10 @@ gem 'devise'
 #ignore
 gem 'dotenv-rails', groups: [:development, :test]
 
+#bootstrap
+gem 'twitter-bootstrap-rails', '~> 4.0.0'
+gem 'devise-bootstrap-views'
+
 
 
 
