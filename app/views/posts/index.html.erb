@@ -6,7 +6,12 @@
       <tr>
         <td><%= link_to post.id, post_path(post) %></td>        
         <td><%= video_tag post.video_url %></td>
-        <td><b><%= post.description %></b></td>       
+        <td>
+          <p>
+            <b><%= post.title %></b>
+            <%= post.description %>
+          </p>
+        </td>   
         
       </tr>
     <% end %>
