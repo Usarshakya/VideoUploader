@@ -7,6 +7,7 @@ end
 
 #video upload gem
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-video', '~> 0.5.6'
 gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
 
 
