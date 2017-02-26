@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= video_tag @post.video_url.to_s if painting.image? %> 
+  <% if @post.video.present? %>
+      <%= video_tag @post.video_url.to_s %>
+  <% end %>
 </p>
 
 <p>

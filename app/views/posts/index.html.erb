@@ -14,7 +14,10 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= video_tag post.video_url.to_s if painting.image? %> </td>
+        <td><% if post.video.present? %>
+              <%= video_tag post.video_url.to_s %>
+            <% end %>              
+        </td>
         <td><%= post.description %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
