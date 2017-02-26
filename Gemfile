@@ -8,10 +8,12 @@ end
 #video upload gem
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-video', '~> 0.5.6'
-gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
+# gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
+# gem 'mini_magick', '3.8.0'
 
 #debugger
 gem 'pry-rails', '~> 0.3.5'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

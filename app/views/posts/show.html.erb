@@ -2,8 +2,7 @@
 
 <p>
   <% if @post.video.present? %>
-  <%binding.pry%>
-      <%= video_tag @post.video_url(:thumb) %>
+      <%= video_tag @post.video_url %>
   <% end %>
 </p>
 
