@@ -2,7 +2,7 @@
 
 <p>
   <% if @post.video.present? %>
-      <%= video_tag @post.video_url.to_s %>
+      <%= video_tag @post.video_url(:thumb).to_s %>
   <% end %>
 </p>
 
