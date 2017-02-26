@@ -14,6 +14,8 @@ gem 'carrierwave-video', '~> 0.5.6'
 #debugger
 gem 'pry-rails', '~> 0.3.5'
 
+#devise
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
