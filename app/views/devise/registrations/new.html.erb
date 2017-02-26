@@ -23,6 +23,8 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
       <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
+      <%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn btn-default'  %>
     <% end %>
   </div>
 </div>

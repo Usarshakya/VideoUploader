@@ -20,6 +20,8 @@
         </div>
       <% end %>
       <%= f.submit  t('.sign_in', default: 'Sign in'), class: 'btn btn-primary' %>
+      <%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn btn-default'  %>
     <% end %>
   </div>
 </div>
