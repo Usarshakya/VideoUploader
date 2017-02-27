@@ -6,11 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 #video upload gem
-gem 'carrierwave', '~> 1.0'
-gem 'carrierwave-video', '~> 0.5.6'
-gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
-# gem 'mini_magick', '3.8.0'
-# gem 'streamio-ffmpeg'
+gem 'carrierwave', '~> 0.11.2'
+gem 'streamio-ffmpeg', '=1.0.0'
+gem 'carrierwave-video', '~>0.5.6'
+gem 'carrierwave-video-thumbnailer', '~>0.1.4'
 
 #debugger
 gem 'pry-rails', '~> 0.3.5'

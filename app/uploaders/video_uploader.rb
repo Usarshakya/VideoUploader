@@ -3,12 +3,13 @@ class VideoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-
+  include CarrierWave::Video
 
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
 
+  process encode_video: [:mp4, audio_codec: 'aac', custom: '-crf 28 -b:v 512k -strict experimental -q:v 5']
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -30,7 +31,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # Create different versions of your uploaded files:
+  # Create different versiexons of your uploaded files:
   # version :thumb do
   #   process resize_to_fit: [50, 50]
   # end
@@ -38,7 +39,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_whitelist
-    %w(.mov .mp4 .avi .vob)
+    %w(mov mp4 avi vob)
   end
 
   # Override the filename of the uploaded files:
