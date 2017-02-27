@@ -4,8 +4,8 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-                
-        <td><%= video_tag post.video_url, controls: true %></td>
+              
+        <td><%= video_tag post.video.url, controls: true %></td>
         <td>
           <p>
             <b><%= post.title %></b><br>

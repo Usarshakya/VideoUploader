@@ -37,9 +37,16 @@ class VideoUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
 
-  version :thumb do
-    process thumbnail: [{quality: 10, size: 192, strip: true, logger: Rails.logger}]    
-  end 
+   version :thumb do
+    process thumbnail: [{format: 'png', quality: 10, size: 192, strip: true, logger: Rails.logger}]
+    def full_filename for_file
+      png_name for_file, version_name
+    end
+  end
+
+  def png_name for_file, version_name
+    %Q{#{version_name}_#{for_file.chomp(File.extname(for_file))}.png}
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
